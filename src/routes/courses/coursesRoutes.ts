@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { getSingleStudent } from "../../controllers/students/getSingleStudent";
 import { upload2 } from "../../middleware/uploads";
 import { createCourse } from "../../controllers/courses/createCourses";
 import { getAllCourses } from "../../controllers/courses/getAllCourses";

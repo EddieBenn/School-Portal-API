@@ -80,6 +80,7 @@ Courses.init({
 {
     sequelize: database,
     modelName: "Courses",
+    schema: 'portal_service',
     timestamps: true
 }
 )
