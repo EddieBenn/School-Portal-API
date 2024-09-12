@@ -23,7 +23,6 @@ export const createCourse = async(req:Request, res:Response) => {
         {reg_no: 'RSC-MAT-1211', firstName: 'Akem', lastName: 'Ben', email: 'akemini.ndaobong@gmail.com'},
         {reg_no: 'RSC-CHE-1213', firstName: 'Benny', lastName: 'Steve', email: 'abn4reel@gmail.com'}
     ]
-    console.log(req.body)
                 const newCourse = await Courses.create({
                     id: v4(),
                     course_code,
