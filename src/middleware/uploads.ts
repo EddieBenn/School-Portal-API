@@ -1,14 +1,15 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request } from 'express';
 import multer from 'multer';
 import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import dotenv from 'dotenv';
 import { v2 as cloudinary } from 'cloudinary';
+
 dotenv.config();
 
 cloudinary.config({ 
   cloud_name: process.env.CLOUDINARY_NAME, // Removed backticks and curly braces
-  api_key: process.env.API_KEY_4_CLOUDINARY, // Removed backticks and curly braces
-  api_secret: process.env.API_SECRET_4_CLOUDINARY, // Removed backticks and curly braces
+  api_key: process.env.API_KEY, // Removed backticks and curly braces
+  api_secret: process.env.API_SECRET, // Removed backticks and curly braces
 });
 
 const storage = new CloudinaryStorage({
@@ -45,6 +46,7 @@ export const upload = multer({
     }
   },
 });
+
 export const upload2 = multer({
     storage: storage2,
     fileFilter: (req: Request, file, cb) => {
